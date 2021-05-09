@@ -9,17 +9,17 @@ export class AdminRepository {
     this.admins = [
       {
         id: 0,
-        login: "Sasha",
+        login: "sasha",
         password: "12345"
       },
       {
         id: 1,
-        login: "Vova",
+        login: "vova",
         password: "54321"
       },
       {
         id: 2,
-        login: "Mama",
+        login: "mama",
         password: "123"
       }
     ];
