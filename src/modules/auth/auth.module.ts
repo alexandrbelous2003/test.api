@@ -2,7 +2,6 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 import { PassportModule } from '@nestjs/passport';
-import { config } from 'rxjs';
 import { AdminModule } from '../admin/admin.module';
 import { AuthController } from './controllers/auth.controller';
 import { AuthService } from './service/auth.service';
