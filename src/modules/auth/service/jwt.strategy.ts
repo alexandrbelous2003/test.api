@@ -6,21 +6,20 @@ import { AuthService } from './auth.service';
 
 
 @Injectable()
-export class JwtStrategy extends PassportStrategy(Strategy){
+export class JWTStrategy extends PassportStrategy(Strategy){
     constructor(private authService: AuthService,private configService: ConfigService){
         super({
           jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-          ignoreExpiration:false,
+          ignoreExpiration: false,
           secretOrKey: configService.get<string>('JWT_SECRET'),
+        
         });
     }
 
-    async validate(payload: any): Promise<any>{
+    async validate(payload: any ): Promise<any>{
 
 
-    
-        const{iat, exp, ...res} = payload;
-       return res;
-        
+        const {iat, exp, ...res} = payload; 
+      return res;
     }
 }
